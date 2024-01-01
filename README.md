@@ -56,6 +56,27 @@ parcel with the help of Browsers list is used to configure all the browsers prov
 
 //browserslist.dev is the website it would give the list of the browsers along with its version
 
+# EP 03
+
 
 
 #JSX React (T JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file. )
+
+JSX understands the ECMA Script (Java Script);
+
+Parcel transpiles(Converts the JSX code to Java script codes) the codes of JSX code before it reaches Java script engine.
+
+Baybel Package (It is inside parcel)  :- converts the JSX Code to the Java script code
+
+Babel is a JavaScript compiler that converts modern JavaScript code into a version compatible with all browsers. Babel enables React developers to use the latest JavaScript syntax in their components(JSX). Babel transpiles modern JavaScript for use in React components and all browsers.
+
+JSX has the camel casing in its attributes
+
+JSX for single line does not have rounded brackets however if you are using mulitple line then we have to write in Rounded brackets
+
+2 Types of Components
+
+1) Class based components :- Old Way Writing code
+2) Functional Components :- New Way Writing code
+
+JSX Santiize the data and prevent cross script data  (Malicious data is removed by the JSX)
