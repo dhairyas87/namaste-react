@@ -3,7 +3,7 @@
 
 
 # EP02:-
-npm parcel index.html
+npx parcel index.html
 
 Creating a bundle and be production ready
 HMR :- Hot Module Replacement. It automatically refreshes as immediately. It used file watching algorithm and it refreshes automatically as soon as it saves up and builds up once again.
@@ -55,3 +55,7 @@ It can be also configured depending upon the coutnry users such as Chrome US use
 parcel with the help of Browsers list is used to configure all the browsers provided/
 
 //browserslist.dev is the website it would give the list of the browsers along with its version
+
+
+
+#JSX React (T JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file. )
