@@ -1,5 +1,5 @@
-export const swiggydata = {
-  data: [
+export const swiggydata = 
+   [
     {
       info: {
         id: "498382",
@@ -681,4 +681,3 @@ export const swiggydata = {
       widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
     }
   ]
-}

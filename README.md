@@ -117,3 +117,7 @@ Dynamic Cards :- Props :- Properties passed to a component
 You can pass Props object which has different properties
 
 you can pass as an individual properties inside the java script which is called destructuring on the fly
+
+Do not use indexes as keys while using looping as rendering is used for optimization for rendering UI in react
+
+so index as keys should not be used

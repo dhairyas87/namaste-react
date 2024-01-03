@@ -39,23 +39,23 @@ const Header = () => {
  }
 
  const  Card = (props) => {
-        console.log(props);
         const {resData} = props; 
+        const {cloudinaryImageId,name,avgRating,cuisines,costForTwo,sla} = resData?.info;
         return (
                 <div className="card" style={styleCard}>
                         <img 
                         className="card-logo"
-                        src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.data[1].info.cloudinaryImageId}></img>
-                        <h3>{resData.data[1].info.name}</h3>
-                        <h4>{resData.data[1].info.cuisines.join(", ")}</h4>
-                        <h4>{resData.data[1].info.avgRating} Stars</h4>
-                        <h4>{resData.data[1].info.costForTwo}</h4>
-                        <h4>{resData.data[1].info.sla.deliveryTime} minutes</h4>
+                        src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}></img>
+                        <h3>{name}</h3>
+                        <h4>{cuisines.join(", ")}</h4>
+                        <h4>{avgRating} Stars</h4>
+                        <h4>{costForTwo}</h4>
+                        <h4>{sla.deliveryTime} minutes</h4>
                 </div>
         )
  }
 
-
+// Not using indexes <<< Index as a key <<<<<<<<<<< unique Id as key
 
  const Body = () => {
         return (
@@ -64,9 +64,9 @@ const Header = () => {
                                 Search
                         </div>
                         <div className="card-container">
-                                <Card resData={swiggydata}> </Card>
-                               
-                               
+                                {
+                                        swiggydata.map(res => <Card key={res.info.id} resData={res}/>)
+                                }                              
                         </div>
                 </div>
         )
