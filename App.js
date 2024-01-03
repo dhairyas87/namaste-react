@@ -1,78 +1,87 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
- 
- //ReactDOM.create Element creates a React Element and when we render to DOM then only it become the HTML element.
-
- const root = ReactDOM.createRoot(document.getElementById("root"));
-
- const heading =  React.createElement(
-        "h1",
-        {id:"heading"},
-        "Namaste React"
- )
-const jsxHeading = (
-<h1 id="heading1" className="heading" > 
-Namaste React</h1>
-)
-
-// React Functional Components :- Any component starts with the Capital Alphates 
-
-// Functional components :- Would return any JSX components
-
-
-const HeadingComponent = () => {
-        return <p className="heading">Namaste React from the React Functional Components</p>
-}
-
-const HeadingComponent2 = () => (
-<h1 className="heading">Namaste React from the React Functional Components 2</h1>
-)
-        
-
-
-/* 
-Both HeadingComponent and HeadingComponent2 are same functional component just syntax is different , we can write functional 
-components in both the ways
+import { swiggydata } from "./restaurantdata.js";
+/*
+App
+        -> Header
+                -> Logo
+                -> Nav Items
+        -> Body
+                -> Search Component
+                -> Restaurant card container
+                -> Restaurant Card
+        -> Footer
+                -> Links (Address, Contact Info)
+                -> Copyright
 */
 
-// To render React functional component on the webpage , you can use this 
-
-
-
-
-root.render(<HeadingComponent />);
-
-//Component Composition is component instide a component
-const HeaderComponent3 = () => {
+const Header = () => {
         return (
-                <h2>
-        <p className="heading"> Rendering from Component 3   </p>
-               <HeadingComponent/> 
-               </h2>
-      )
-};
+                <div className="header">
+                        <div className="logo-container">
+                                <img className="logo" src = "https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"/>
+                        </div>
+                        <div className="nav-items">
+                                <ul>
+                                        <li>Home</li>
+                                        <li>About Us</li>
+                                        <li>Contact Us</li>
+                                        <li>Cart</li>
+                                </ul>
+                        </div>
 
-root.render(<HeaderComponent3 />);
+                </div>
+        )
+ }
+ const styleCard = {
+        backgroundColor : "#f0f0f0"
+ }
 
-
-//Ways to write different components inside react and JSX
-
-const HeaderComponent4 = () => {
+ const  Card = (props) => {
+        const {resData} = props; 
+        const {cloudinaryImageId,name,avgRating,cuisines,costForTwo,sla} = resData?.info;
         return (
-                <h2>
-        <p className="heading"> Rendering from Component 3   </p>
-            {100*200}
-            <HeadingComponent/>
-            <HeaderComponent3></HeaderComponent3>
-            {HeadingComponent2()}
-               </h2>
-      )
-};
-root.render(<HeaderComponent4 />);
+                <div className="card" style={styleCard}>
+                        <img 
+                        className="card-logo"
+                        src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}></img>
+                        <h3>{name}</h3>
+                        <h4>{cuisines.join(", ")}</h4>
+                        <h4>{avgRating} Stars</h4>
+                        <h4>{costForTwo}</h4>
+                        <h4>{sla.deliveryTime} minutes</h4>
+                </div>
+        )
+ }
 
+// Not using indexes <<< Index as a key <<<<<<<<<<< unique Id as key
 
+ const Body = () => {
+        return (
+                <div className="body">
+                        <div className="search">
+                                Search
+                        </div>
+                        <div className="card-container">
+                                {
+                                        swiggydata.map(res => <Card key={res.info.id} resData={res}/>)
+                                }                              
+                        </div>
+                </div>
+        )
+ }
+ 
+ const AppLayout = () => {
+        return (
+                <div className="app">
+                     <Header></Header>
+                     <Body></Body>
+                </div>
+        )
+ }
 
- //root.render(jsxHeading);
+ 
 
- // We can write any java script code inside the React Functional component by enclosing it into curly brackets {}
+ const root = ReactDOM.createRoot(document.getElementById("root"));
+ root.render(<AppLayout></AppLayout>);

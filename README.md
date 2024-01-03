@@ -80,3 +80,44 @@ JSX for single line does not have rounded brackets however if you are using muli
 2) Functional Components :- New Way Writing code
 
 JSX Santiize the data and prevent cross script data  (Malicious data is removed by the JSX)
+
+
+
+# EP 04 :- Coding of the swiggy UI
+
+This to take consideration is the wireframes and components needed to make a simple swiggy ui app
+
+Any App :- Senior Engineer
+
+1) Planning :- UI Design / Mock / Wireframes
+
+2) Low Level Design :- Components 
+
+    -> Header
+        -> Logo
+        -> Nav Items
+    -> Body
+        -> Search Component
+        -> Restaurant card container
+            -> Restaurant Card
+                -> Img
+                -> Name of Restaurant
+                -> Cusines
+                -> Star Rating 
+                -> Time to prepare
+    -> Footer
+        -> Links (Address, Contact Info)
+        -> Copyright
+
+Style attribute in a JSX is a java script object and needs to be given as a java script object
+
+
+Dynamic Cards :- Props :- Properties passed to a component
+
+You can pass Props object which has different properties
+
+you can pass as an individual properties inside the java script which is called destructuring on the fly
+
+Do not use indexes as keys while using looping as rendering is used for optimization for rendering UI in react
+
+so index as keys should not be used
