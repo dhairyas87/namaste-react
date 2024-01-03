@@ -110,3 +110,10 @@ Any App :- Senior Engineer
         -> Copyright
 
 Style attribute in a JSX is a java script object and needs to be given as a java script object
+
+
+Dynamic Cards :- Props :- Properties passed to a component
+
+You can pass Props object which has different properties
+
+you can pass as an individual properties inside the java script which is called destructuring on the fly

@@ -1,6 +1,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { swiggydata } from "./restaurantdata.js";
 /*
 App
         -> Header
@@ -37,14 +38,24 @@ const Header = () => {
         backgroundColor : "#f0f0f0"
  }
 
- const  Card = () => {
+ const  Card = (props) => {
+        console.log(props);
+        const {resData} = props; 
         return (
                 <div className="card" style={styleCard}>
-                        <img src="https://assets.limetray.com/assets/image_manager/uploads/5128/Malamal%20Chicken%20Biryani%20(2).jpg"></img>
-                        <h3>Meghana Foods</h3>
+                        <img 
+                        className="card-logo"
+                        src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.data[1].info.cloudinaryImageId}></img>
+                        <h3>{resData.data[1].info.name}</h3>
+                        <h4>{resData.data[1].info.cuisines.join(", ")}</h4>
+                        <h4>{resData.data[1].info.avgRating} Stars</h4>
+                        <h4>{resData.data[1].info.costForTwo}</h4>
+                        <h4>{resData.data[1].info.sla.deliveryTime} minutes</h4>
                 </div>
         )
  }
+
+
 
  const Body = () => {
         return (
@@ -53,7 +64,9 @@ const Header = () => {
                                 Search
                         </div>
                         <div className="card-container">
-                                <Card></Card>
+                                <Card resData={swiggydata}> </Card>
+                               
+                               
                         </div>
                 </div>
         )
