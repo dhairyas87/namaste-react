@@ -121,3 +121,46 @@ you can pass as an individual properties inside the java script which is called 
 Do not use indexes as keys while using looping as rendering is used for optimization for rendering UI in react
 
 so index as keys should not be used
+
+
+# EP 05 :- Getting hooked
+
+/*
+App
+        -> Header
+                -> Logo
+                -> Nav Items
+        -> Body
+                -> Search Component
+                -> Restaurant card container
+                -> Restaurant Card
+        -> Footer
+                -> Links (Address, Contact Info)
+                -> Copyright
+*/
+
+Why React? --> Anything can be done using CSS, JS and HTML
+
+React framework makes the developer's life easy also its easy to develop large scalable applications using react framework
+
+There are two types of export and imports 
+
+1) Default Export and import
+
+const nameofcomponent ={
+
+}
+
+export default nameofcomponent.js;
+import nameofcomponent from path;
+
+2) Named Export and import
+
+export const nameofcomponent ={
+
+}
+import {nameofcomponent} from path;
+
+
+React Hooks :-  
+
