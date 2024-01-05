@@ -162,5 +162,37 @@ export const nameofcomponent ={
 import {nameofcomponent} from path;
 
 
-React Hooks :-  
+# React Hooks :-  
+
+Normal JS Utility Function 
+
+1) useState() :- 
+2) useEffect() :- 
+
+React Hook is normal JS function provided by React to use for changes state changes
+
+
+State Variable is mantaining the state inside a component .
+
+Whenever State Variable updates, react re-renders the component.
+
+React makes DOM operations superfast and that is why the react is used in making large scale applicaitons 
+
+DOM Operations is code for the React
+
+
+
+# React Algorihtm :- Uses Reconcialltion Algorithm / React Fiber
+
+Rest contatiner -> Suppose it has 15 Restaurant Cards -> Ui changes from 15 cards to 5-6 Filtered Cards 
+
+React creates Virtual DOM (It is not actual DOM).
+
+Virtaul DOM is representation of the Actual DOM -> It creates an object of an component.
+
+Virtaul DOM is a React Object of a component.
+
+React Fiber :- Diff Algo :- Finds out the differences between old and new Virtual DOM of the component. Then it would just update the Actual DOM.
+
+
 
