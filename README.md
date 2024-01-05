@@ -121,3 +121,78 @@ you can pass as an individual properties inside the java script which is called 
 Do not use indexes as keys while using looping as rendering is used for optimization for rendering UI in react
 
 so index as keys should not be used
+
+
+# EP 05 :- Getting hooked
+
+/*
+App
+        -> Header
+                -> Logo
+                -> Nav Items
+        -> Body
+                -> Search Component
+                -> Restaurant card container
+                -> Restaurant Card
+        -> Footer
+                -> Links (Address, Contact Info)
+                -> Copyright
+*/
+
+Why React? --> Anything can be done using CSS, JS and HTML
+
+React framework makes the developer's life easy also its easy to develop large scalable applications using react framework
+
+There are two types of export and imports 
+
+1) Default Export and import
+
+const nameofcomponent ={
+
+}
+
+export default nameofcomponent.js;
+import nameofcomponent from path;
+
+2) Named Export and import
+
+export const nameofcomponent ={
+
+}
+import {nameofcomponent} from path;
+
+
+# React Hooks :-  
+
+Normal JS Utility Function 
+
+1) useState() :- 
+2) useEffect() :- 
+
+React Hook is normal JS function provided by React to use for changes state changes
+
+
+State Variable is mantaining the state inside a component .
+
+Whenever State Variable updates, react re-renders the component.
+
+React makes DOM operations superfast and that is why the react is used in making large scale applicaitons 
+
+DOM Operations is code for the React
+
+
+
+# React Algorihtm :- Uses Reconcialltion Algorithm / React Fiber
+
+Rest contatiner -> Suppose it has 15 Restaurant Cards -> Ui changes from 15 cards to 5-6 Filtered Cards 
+
+React creates Virtual DOM (It is not actual DOM).
+
+Virtaul DOM is representation of the Actual DOM -> It creates an object of an component.
+
+Virtaul DOM is a React Object of a component.
+
+React Fiber :- Diff Algo :- Finds out the differences between old and new Virtual DOM of the component. Then it would just update the Actual DOM.
+
+
+

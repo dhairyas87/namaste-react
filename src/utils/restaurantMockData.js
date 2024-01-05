@@ -1,4 +1,4 @@
-export const swiggydata = 
+ const swiggydata = 
    [
     {
       info: {
@@ -681,3 +681,6 @@ export const swiggydata =
       widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
     }
   ]
+
+
+export default swiggydata;
