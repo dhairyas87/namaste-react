@@ -195,4 +195,29 @@ Virtaul DOM is a React Object of a component.
 React Fiber :- Diff Algo :- Finds out the differences between old and new Virtual DOM of the component. Then it would just update the Actual DOM.
 
 
+# EP 06 :- Rendering the Real World Web App
+
+Two Approaches 
+
+1) Load -> wait API call for 500ms () -> Then Render
+2) Load -> Render UI -> API call  -> Render again 
+
+2nd approach is bit better as UI has some sort of screen to the customers/Consumers
+
+1) Use Effect Hooks -> useEffect () -> Normal JS function it has use case of rendering the data to UI
+
+Use Effect hook has two arguments ->  1) Call Back function (Arrow function)
+
+2) Dependencies
+
+Use Effect call back function is called after the component is rendered i.e 2nd Approach for rendering data
+
+
+Fetch is as function is provided by the Browser and its used to fetch data from API;
+
+fetch() => Returns a promise and use resolve it. it is a used to fetch data for the API's like swiggy API
+
+
+CORS  Policy :- Cross Side Scripting :- Browsers block calling of one API origin to another API call origin
+
 
