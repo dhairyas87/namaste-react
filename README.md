@@ -213,4 +213,11 @@ Use Effect hook has two arguments ->  1) Call Back function (Arrow function)
 Use Effect call back function is called after the component is rendered i.e 2nd Approach for rendering data
 
 
+Fetch is as function is provided by the Browser and its used to fetch data from API;
+
+fetch() => Returns a promise and use resolve it. it is a used to fetch data for the API's like swiggy API
+
+
+CORS  Policy :- Cross Side Scripting :- Browsers block calling of one API origin to another API call origin
+
 

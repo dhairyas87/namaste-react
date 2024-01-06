@@ -6,9 +6,17 @@ const Body = () => {
     
     const [listOfRestaurants,setListOfRestaurants] =  useState(swiggydata)
     
-  useEffect (() => {
-        console.log("Use Effect callled");
+useEffect (() => {
+        fetchData();
     },[]);
+const fetchData = async () => {
+    const data  = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999",{mode:'no-cors'}   );
+       
+    const json = await data;
+    console.log(json);
+   
+}   
     console.log("Body Rendered ");
     return (
             <div className="body">
