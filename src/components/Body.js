@@ -1,11 +1,15 @@
 import  swiggydata  from "../utils/restaurantMockData";
 import Card from "./Card";
-import  { useState } from "react";
+import  { useState ,useEffect} from "react";
+
 const Body = () => {
     
     const [listOfRestaurants,setListOfRestaurants] =  useState(swiggydata)
     
-    
+  useEffect (() => {
+        console.log("Use Effect callled");
+    },[]);
+    console.log("Body Rendered ");
     return (
             <div className="body">
                     <div className="filter">
@@ -13,7 +17,7 @@ const Body = () => {
                         onClick={
                             () => {
                              const  filteredList = listOfRestaurants.filter((res)=> res.info.avgRating>4)
-                                console.log(filteredList);
+                               console.log(filteredList);
                                 setListOfRestaurants(filteredList);
                             }
                            
