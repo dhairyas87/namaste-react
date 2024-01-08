@@ -1,7 +1,7 @@
 import  swiggydata  from "../utils/restaurantMockData";
 import Card from "./Card";
 import  { useState ,useEffect} from "react";
-
+import Shimmer from "./Shimmer";
 const Body = () => {
     
 const [listOfRestaurants,setListOfRestaurants] =  useState([])
@@ -19,7 +19,7 @@ const fetchData = async () => {
    
                             }
 if(listOfRestaurants.length==0){
-    return <div>Loading.......</div>
+    return <Shimmer></Shimmer>
 }   
 return (
             <div className="body">

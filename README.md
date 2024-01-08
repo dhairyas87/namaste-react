@@ -227,6 +227,6 @@ To Load a Spinner we need to make a condition untill the data is empty or list l
 
 However, showing a spinner is not a good practice instead load a dummy page untill then (Dummy Page untill data loads 
 
-so that user can anticipate that cards are going to be displayed or the what view the data would be displayed i.e skeleton of the UI ) this practice of displaying Skeleton untill actual data is loaded is called shimmer ui practice
+so that user can anticipate that cards are going to be displayed or the what view the data would be displayed i.e skeleton of the UI ) this practice of displaying Skeleton untill actual data is loaded is called shimmer ui practice.
 
 
