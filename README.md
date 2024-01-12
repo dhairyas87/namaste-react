@@ -243,3 +243,43 @@ Use state re renders (Re-concillation) the component with the new value passed d
 
 Whenever the local state variable is changed/updates then whole component is reconcilled and re rendered. It executes reconcillation cycle again.
 
+
+# EP 07 :- Routing for the React 
+
+
+Use Effect  :- 
+
+-->  Use Effect is called using react library , it has two arguments 1) Call Back Function 2) Dependency Array 
+
+Call Back Function is mandatory in use Effect 
+
+1) If no dependency array is provided in Use Effect Function, it will be called on every component render
+
+useEffect(()={console.log("Header component")})
+
+2) If the dependency array is empty, then use Effect is called on only initial render of the component i.e just once (For example, in Body component  use effect is called for fetching Swiggy data)
+
+useEffect(()={console.log("Header component")},[]);
+
+3) if something is added, then it will be only called when dependency changes
+
+i.e useEffect(()={console.log("Header component")},[btnNameReact]);
+
+The above will be called only when btnNameReact changes
+
+Use State Variable Usage
+
+
+1) Never create local Use State Variables outside of component
+2) Never create use state variables inside if Else/ For loop/ Inside Functions as it can create in consitencies
+
+
+Routing :- npm router DOM is used for creating routes inside react application
+
+npm i react-router-dom
+
+Routing configuration inside at App config stage
+
+Router Provider provides the routing configuration to the App
+
+createBrowserRouter is the recommended router for all react router web based projects
