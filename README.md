@@ -230,3 +230,16 @@ However, showing a spinner is not a good practice instead load a dummy page unti
 so that user can anticipate that cards are going to be displayed or the what view the data would be displayed i.e skeleton of the UI ) this practice of displaying Skeleton untill actual data is loaded is called shimmer ui practice.
 
 
+
+Reconcillation of component (Re render of component) happens when we use the useState method for tracking the variable for rendering 
+
+
+Use state re renders (Re-concillation) the component with the new value passed during setting
+
+1) Why Need Use State and useEffect?
+2) How?
+3) 
+
+
+Whenever the local state variable is changed/updates then whole component is reconcilled and re rendered. It executes reconcillation cycle again.
+
