@@ -66,3 +66,27 @@
 .filter{
     display: flex;
 }
+
+.menu-container{
+    display: flex;
+    flex-flow: row;
+    width: 450px;
+    height: 100px;
+}
+.menu{
+  
+    
+    padding: 5px;
+    margin:5px;
+
+   
+}
+.menu:hover{
+    border:  1px solid black;
+    cursor: pointer;
+}
+.menu > img {
+    width: 50%;
+    height: 100%;
+
+}
