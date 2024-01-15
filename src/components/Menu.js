@@ -1,4 +1,4 @@
-import { MENU_URL } from "../utils/constant";
+import { MENU_IMAGE_URL, MENU_URL } from "../utils/constant";
 
 const Menu = (props) => {
     const {resData} = props; 
@@ -6,14 +6,11 @@ const Menu = (props) => {
 
     return (
         <div className="menu" >
-                <img className="menu-logo"
-                src={MENU_URL+imageId}></img>
-                <h3>{name}</h3>
-               
-              
-                <h4>{price}</h4>
-                <h4> {category}</h4>
-                
+                <img className="menu-item"
+                src={MENU_IMAGE_URL+imageId}></img>
+                <h3 className="menu-item">{name}</h3>
+                <h4 className="menu-item">{price}</h4>
+                <h4 className="menu-item"> {category}</h4>           
         </div>
     )
 }

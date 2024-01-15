@@ -68,18 +68,19 @@
 }
 
 .menu-container{
-    display: flex;
-    flex-flow: row;
-    width: 450px;
-    height: 100px;
+    
+    flex-flow: column;
+    width: 250px;
+    height: 30px;
 }
 .menu{
-  
-    
     padding: 5px;
-    margin:5px;
-
    
+    display: inline-flex;  
+    align-self: center;
+}
+.menu-item{
+    padding: 5px;
 }
 .menu:hover{
     border:  1px solid black;
