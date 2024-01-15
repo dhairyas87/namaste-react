@@ -283,3 +283,24 @@ Routing configuration inside at App config stage
 Router Provider provides the routing configuration to the App
 
 createBrowserRouter is the recommended router for all react router web based projects
+
+
+Outlet is used for the child routing in the application 
+
+
+Never Use Anchor Tag for the linking, as it reloads the whole page again.
+
+So not to reload the whole page, we can use Link Component in React
+
+
+React is also a single page application, as it has only single page and routing outlet helps us to not change the page just change the children component
+
+
+1) Client Side Routing 
+
+2) Server side routing :- Old way of routing as it fetches entire index.html, about
+
+
+Dynamic Routing :- Dynamic route for every restaurant present in the application 
+
+path:"/restaurants/:resId" -> :resId is the dynamic route of the restaurant

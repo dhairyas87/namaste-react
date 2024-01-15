@@ -66,3 +66,28 @@
 .filter{
     display: flex;
 }
+
+.menu-container{
+    
+    flex-flow: column;
+    width: 250px;
+    height: 30px;
+}
+.menu{
+    padding: 5px;
+   
+    display: inline-flex;  
+    align-self: center;
+}
+.menu-item{
+    padding: 5px;
+}
+.menu:hover{
+    border:  1px solid black;
+    cursor: pointer;
+}
+.menu > img {
+    width: 50%;
+    height: 100%;
+
+}
