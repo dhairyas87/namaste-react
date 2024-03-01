@@ -9,6 +9,7 @@ const About = () => {
             <div>
                 This is Namaste React About Us Page
             </div>
+            <User/>
             <UserClass name={"Dhairya Shah Class Props"} location ={ "Sydney,Australia"}/>
         </div>
     )

@@ -322,3 +322,17 @@ Passing Props in the React Class Component => create a constructor which would h
 Super (props) is crucial in the above example because it is the only place to set up our initial state and bind event handlers before the React component mounts. By using super(props), we ensure that the constructor props are correctly passed to the parent constructor, allowing us to access this.
 
 When instance of class is created a constructor is called and the props is extracted and assigned to current object
+
+
+Creating State :-
+
+For Functional Component creating a state we use Hooks i.e useState();
+
+Invoking a functional component means mounting a functional component
+
+Loading a class based component means creating a instance of a class
+
+To create a State variable , the best place is in the constructor 
+this.state is a reserved varibale and it has all the variables for the state variables
+
+Hooks are very new concept.
