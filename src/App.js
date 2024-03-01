@@ -20,7 +20,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
  
  
  const AppLayout = () => {
-        console.log(<Body/>)
+      //  console.log(<Body/>)
         return (
                 <div className="app">
                      <Header></Header>
@@ -34,9 +34,9 @@ import RestaurantMenu from "./components/RestaurantMenu";
         element: <AppLayout/>,
         children:[
               {
-                     path:"/",
+                     path:"/swiggy",
                      element:<Body/>,
-                     errorElement:<Error/>
+                   //  errorElement:<Error/>
               },
               {
                      path:"/about",
