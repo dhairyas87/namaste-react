@@ -332,7 +332,14 @@ Invoking a functional component means mounting a functional component
 
 Loading a class based component means creating a instance of a class
 
+Hooks are very new concept.
+
 To create a State variable , the best place is in the constructor 
 this.state is a reserved varibale and it has all the variables for the state variables
 
-Hooks are very new concept.
+For updating a state varibale in the functional component we were using the set Method to update the state of variables
+
+ //this.state.count = this.state.count+1 (This is incorrect. Never update the state variables direct as it would not update it directly)
+
+ use this.setState to update any of the state variables.
+
