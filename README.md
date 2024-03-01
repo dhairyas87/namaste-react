@@ -304,3 +304,21 @@ React is also a single page application, as it has only single page and routing 
 Dynamic Routing :- Dynamic route for every restaurant present in the application 
 
 path:"/restaurants/:resId" -> :resId is the dynamic route of the restaurant
+
+
+# EP 08 :- Lets Get Classy (Class Based Components)
+
+Functional Component -> is normal java script function
+
+Class Component  => Normal JS Class
+
+
+To create a class compnent create class which is extending React.component
+
+Have a render method inside a class -> This would return a piece of JSX which would be displayed in the React app. (This is actual rendering happening)
+
+Passing Props in the React Class Component => create a constructor which would have a props as an argument and inside that have a super(props) call. This super(props) is mandatory while passing the values
+
+Super (props) is crucial in the above example because it is the only place to set up our initial state and bind event handlers before the React component mounts. By using super(props), we ensure that the constructor props are correctly passed to the parent constructor, allowing us to access this.
+
+When instance of class is created a constructor is called and the props is extracted and assigned to current object
