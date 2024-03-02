@@ -343,3 +343,9 @@ For updating a state varibale in the functional component we were using the set 
 
  use this.setState to update any of the state variables.
 
+
+ React state variable lifecycle. (Loading the component -> Mounting the component)
+
+
+ Mounting -> Parent -> Child Relationship -> When parent gets loaded (Mounted) Constructor of parent wuold be called then parent rendered would be called then in render it would go to child(class based component), so it has not has finished mounting, then it would trigger child based life cycle would be called -> Childeren constrcutor, children render and children componentDidMount method. Then the parent component Did mount method is class
+

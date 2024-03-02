@@ -9,6 +9,7 @@ import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+import AboutClass from "./components/AboutClass";
 
 
  
@@ -41,7 +42,13 @@ import RestaurantMenu from "./components/RestaurantMenu";
               {
                      path:"/about",
                      element:<About/>
-              },{
+              },
+              {
+                     path:"/aboutClass",
+                     element:<AboutClass/>      
+              },
+              
+              {
                      path:"/contactUs",
                      element:<ContactUs/>
               },{

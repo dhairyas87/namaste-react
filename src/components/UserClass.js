@@ -5,7 +5,7 @@ class UserClass extends React.Component{
 
     constructor(props){
         super(props);
-        console.log(props);
+        console.log("Child Contructor");
         this.state = {
             count:0, 
             
@@ -13,7 +13,8 @@ class UserClass extends React.Component{
     }
 
     render(){
-        const {name,location} = this.props;
+        console.log("Child render");
+        const {name} = this.props;
         const{count} = this.state;
         return <div className="user-card">
         <h1>Count :{count} This is from class based component</h1>
@@ -33,6 +34,9 @@ class UserClass extends React.Component{
             Contact: dhairyacodes87
         </h4>
     </div>
+    }
+    componentDidMount(){
+        console.log("Child Component Mounted (Loaded)");
     }
 }
 
