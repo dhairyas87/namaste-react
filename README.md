@@ -385,3 +385,12 @@ React batches render phases for all the children and then it renders it comit.
 Then commit would be in Batch as well.
 
 
+1) Constructor is called (parent)
+2) Render (Parent) is called (It happens with state variables of dummy data)
+3) it has loaded in webpage for ms
+4) component Did mount is called, which makes and API call . 
+5) In compoentDidmount will asign this.state by using set state method.
+6) This finishes the mounting cycle
+7) Now update cycle beigns. i.e. Render again is called , so now HTML is loaded with new API data
+8) Then it calls componentDidUpdate is called.
+

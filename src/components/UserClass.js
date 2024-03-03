@@ -5,6 +5,7 @@ class UserClass extends React.Component{
 
     constructor(props){
         super(props);
+        console.log("Constructor called")
         this.state = { 
             userInfo:{
                 name:"Dummy",
@@ -15,7 +16,7 @@ class UserClass extends React.Component{
     }
 
     render(){
-      
+        console.log("Render called")
         const{name,location,avatar_url} =this.state.userInfo;
         return <div className="user-card">
         <img src = {avatar_url}></img>
@@ -31,14 +32,17 @@ class UserClass extends React.Component{
     </div>
     }
    async componentDidMount(){
-        console.log("Child Component Mounted (Loaded)");
+        console.log("Compoenent Did mount is called");
         const data = await fetch(USER_GITHUB_URL);
         const json = await data.json();
-        console.log(json);
-        console.log(json.name);
+   //     console.log(json);
+    //   console.log(json.name);
         this.setState({
             userInfo:json
         })
+    }
+    componentDidUpdate(){
+        console.log("Component Did update is called");
     }
 }
 

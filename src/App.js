@@ -35,7 +35,7 @@ import AboutClass from "./components/AboutClass";
         element: <AppLayout/>,
         children:[
               {
-                     path:"/swiggy",
+                     path:"/",
                      element:<Body/>,
                    //  errorElement:<Error/>
               },
