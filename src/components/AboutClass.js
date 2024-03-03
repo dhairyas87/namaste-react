@@ -4,6 +4,8 @@ class AboutClass extends React.Component{
     constructor(props){
         super(props);
         console.log("Parent Constructor")
+
+        this.state = {};
     }
     render(){
         console.log("Parent Render Method");
@@ -15,13 +17,12 @@ class AboutClass extends React.Component{
             This is Namaste React About Us Page
         </div>
        
-        <UserClass name={"Dhairya Shah Class Props"} location ={ "Sydney,Australia"}/>
-        <UserClass name={"Dhairya Shah Class Props"} location ={ "Sydney,Australia"}/>
-        <UserClass name={"Dhairya Shah Class Props"} location ={ "Sydney,Australia"}/>
+        <UserClass/>
+      
     </div>
     }
     componentDidMount(){
-        console.log("Parent Component Mounted (Loaded)");
+       // console.log("Parent Component Mounted (Loaded)");
     }
 }
 

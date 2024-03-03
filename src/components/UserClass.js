@@ -1,42 +1,44 @@
 import React from "react"
 import User from "./User"
-
+import {USER_GITHUB_URL} from "../utils/constant"
 class UserClass extends React.Component{
 
     constructor(props){
         super(props);
-        console.log("Child Contructor");
-        this.state = {
-            count:0, 
-            
+        this.state = { 
+            userInfo:{
+                name:"Dummy",
+                location:"TempDummy",
+                avatar_url:"temp"
+            }
         }
     }
 
     render(){
-        console.log("Child render");
-        const {name} = this.props;
-        const{count} = this.state;
+      
+        const{name,location,avatar_url} =this.state.userInfo;
         return <div className="user-card">
-        <h1>Count :{count} This is from class based component</h1>
-        <button onClick={()=>{
-            //this.state.count = this.state.count+1 (This is incorrect. Never update the state variables direct as it would not update it directly)
-            this.setState({
-                count:this.state.count+1
-            })
-       }}> countIncrease</button>
+        <img src = {avatar_url}></img>
         <h2>
             Name:{name}
         </h2>
         <h3>
-            Location: {this.props.location}
+            Location: {location}
         </h3>
         <h4>
             Contact: dhairyacodes87
         </h4>
     </div>
     }
-    componentDidMount(){
+   async componentDidMount(){
         console.log("Child Component Mounted (Loaded)");
+        const data = await fetch(USER_GITHUB_URL);
+        const json = await data.json();
+        console.log(json);
+        console.log(json.name);
+        this.setState({
+            userInfo:json
+        })
     }
 }
 
