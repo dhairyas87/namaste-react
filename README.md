@@ -394,3 +394,32 @@ Then commit would be in Batch as well.
 7) Now update cycle beigns. i.e. Render again is called , so now HTML is loaded with new API data
 8) Then it calls componentDidUpdate is called.
 
+
+-> Constructor called
+UserClass.js:19 Render called
+UserClass.js:35 Compoenent Did mount is called
+UserClass.js:19 Render called
+UserClass.js:45 Component Did update is called
+
+
+Never compare the react class life cycle methods with the functional component
+
+Use Effect is not using the componentDidMount method. so not compare them.
+
+After each and every render useEffect hook is called in functional component.
+
+useEffect for empty dependecy array would be called only once after initial render.
+
+ComponentDidUpdate is called after every udpate., however every time this has to maintian the state to the developers as the developers had to maintain the previous state of variables where as in fucntional programming this has been taken care by the react hooks.
+
+Why to umount things :-> 
+
+to clear the interval so that everytime a component is called its not called again and again.
+
+So clear Interval would be cleared by componentWillUnmount(){
+    so this.timer -> to clear the timer
+
+}
+
+
+return () => {} inside useEffect hook is called when we wwwant to unmount a component()
