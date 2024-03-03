@@ -9,6 +9,7 @@ import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+import AboutClass from "./components/AboutClass";
 
 
  
@@ -20,7 +21,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
  
  
  const AppLayout = () => {
-        console.log(<Body/>)
+      //  console.log(<Body/>)
         return (
                 <div className="app">
                      <Header></Header>
@@ -36,12 +37,18 @@ import RestaurantMenu from "./components/RestaurantMenu";
               {
                      path:"/",
                      element:<Body/>,
-                     errorElement:<Error/>
+                   //  errorElement:<Error/>
               },
               {
                      path:"/about",
                      element:<About/>
-              },{
+              },
+              {
+                     path:"/aboutClass",
+                     element:<AboutClass/>      
+              },
+              
+              {
                      path:"/contactUs",
                      element:<ContactUs/>
               },{

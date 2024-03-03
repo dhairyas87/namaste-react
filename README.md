@@ -304,3 +304,122 @@ React is also a single page application, as it has only single page and routing 
 Dynamic Routing :- Dynamic route for every restaurant present in the application 
 
 path:"/restaurants/:resId" -> :resId is the dynamic route of the restaurant
+
+
+# EP 08 :- Lets Get Classy (Class Based Components)
+
+Functional Component -> is normal java script function
+
+Class Component  => Normal JS Class
+
+
+To create a class compnent create class which is extending React.component
+
+Have a render method inside a class -> This would return a piece of JSX which would be displayed in the React app. (This is actual rendering happening)
+
+Passing Props in the React Class Component => create a constructor which would have a props as an argument and inside that have a super(props) call. This super(props) is mandatory while passing the values
+
+Super (props) is crucial in the above example because it is the only place to set up our initial state and bind event handlers before the React component mounts. By using super(props), we ensure that the constructor props are correctly passed to the parent constructor, allowing us to access this.
+
+When instance of class is created a constructor is called and the props is extracted and assigned to current object
+
+
+Creating State :-
+
+For Functional Component creating a state we use Hooks i.e useState();
+
+Invoking a functional component means mounting a functional component
+
+Loading a class based component means creating a instance of a class
+
+Hooks are very new concept.
+
+To create a State variable , the best place is in the constructor 
+this.state is a reserved varibale and it has all the variables for the state variables
+
+For updating a state varibale in the functional component we were using the set Method to update the state of variables
+
+ //this.state.count = this.state.count+1 (This is incorrect. Never update the state variables direct as it would not update it directly)
+
+ use this.setState to update any of the state variables.
+
+
+ React state variable lifecycle. (Loading the component -> Mounting the component)
+
+when working having component based class, then it creates two instances of csame class.
+
+
+Life Cycle when multiple children class component are present then this is how its called.
+
+React preference is rendering compared to API calls
+
+Important!!! 
+
+Child Contructor
+UserClass.js:16 Child render
+UserClass.js:8 Child Contructor
+UserClass.js:16 Child render
+UserClass.js:8 Child Contructor
+UserClass.js:16 Child render
+UserClass.js:39 Child Component Mounted (Loaded)
+serClass.js:39 Child Component Mounted (Loaded)
+serClass.js:39 Child Component Mounted (Loaded)
+AboutClass.js:24 Parent Component Mounted (Loaded)
+
+
+
+ Mounting -> Parent -> Child Relationship -> When parent gets loaded (Mounted) Constructor of parent wuold be called then parent rendered would be called then in render it would go to child(class based component), so it has not has finished mounting, then it would trigger child based life cycle would be called -> Childeren constrcutor, children render and children componentDidMount method. Then the parent component Did mount method is class
+
+
+ componentDidMount method is used to make API calls. Why? ->  So to quickly render the compoent and then make API call so that component does not have to wait to rendering
+
+ In Functional Component we make API call using useEffect Hook, which has an dependency array which has call back function. So that react does not wait for API call to render the compoent.
+
+
+Imporant React life cycle diagram:-  https://www.google.com/url?sa=i&url=https%3A%2F%2Fprojects.wojtekmaj.pl%2Freact-lifecycle-methods-diagram%2F&psig=AOvVaw0mWdV_pdHHhHX2wAPsceYC&ust=1709509980342000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJDgyYrj1oQDFQAAAAAdAAAAABAE
+
+
+Mounting of a component in react has two phases 1st is render phase and 2nd is the commit phase. In the render phase the react calls constructor and render method of all the child classes it updates the DOM,and then in commit phase React updates the DOM with schedule calls in componentDidMount method.
+
+React batches render phases for all the children and then it renders it comit.
+Then commit would be in Batch as well.
+
+
+1) Constructor is called (parent)
+2) Render (Parent) is called (It happens with state variables of dummy data)
+3) it has loaded in webpage for ms
+4) component Did mount is called, which makes and API call . 
+5) In compoentDidmount will asign this.state by using set state method.
+6) This finishes the mounting cycle
+7) Now update cycle beigns. i.e. Render again is called , so now HTML is loaded with new API data
+8) Then it calls componentDidUpdate is called.
+
+
+-> Constructor called
+UserClass.js:19 Render called
+UserClass.js:35 Compoenent Did mount is called
+UserClass.js:19 Render called
+UserClass.js:45 Component Did update is called
+
+
+Never compare the react class life cycle methods with the functional component
+
+Use Effect is not using the componentDidMount method. so not compare them.
+
+After each and every render useEffect hook is called in functional component.
+
+useEffect for empty dependecy array would be called only once after initial render.
+
+ComponentDidUpdate is called after every udpate., however every time this has to maintian the state to the developers as the developers had to maintain the previous state of variables where as in fucntional programming this has been taken care by the react hooks.
+
+Why to umount things :-> 
+
+to clear the interval so that everytime a component is called its not called again and again.
+
+So clear Interval would be cleared by componentWillUnmount(){
+    so this.timer -> to clear the timer
+
+}
+
+
+return () => {} inside useEffect hook is called when we wwwant to unmount a component()
