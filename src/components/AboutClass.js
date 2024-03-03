@@ -16,6 +16,8 @@ class AboutClass extends React.Component{
         </div>
        
         <UserClass name={"Dhairya Shah Class Props"} location ={ "Sydney,Australia"}/>
+        <UserClass name={"Dhairya Shah Class Props"} location ={ "Sydney,Australia"}/>
+        <UserClass name={"Dhairya Shah Class Props"} location ={ "Sydney,Australia"}/>
     </div>
     }
     componentDidMount(){

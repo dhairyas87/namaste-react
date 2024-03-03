@@ -346,6 +346,42 @@ For updating a state varibale in the functional component we were using the set 
 
  React state variable lifecycle. (Loading the component -> Mounting the component)
 
+when working having component based class, then it creates two instances of csame class.
+
+
+Life Cycle when multiple children class component are present then this is how its called.
+
+React preference is rendering compared to API calls
+
+Important!!! 
+
+Child Contructor
+UserClass.js:16 Child render
+UserClass.js:8 Child Contructor
+UserClass.js:16 Child render
+UserClass.js:8 Child Contructor
+UserClass.js:16 Child render
+UserClass.js:39 Child Component Mounted (Loaded)
+serClass.js:39 Child Component Mounted (Loaded)
+serClass.js:39 Child Component Mounted (Loaded)
+AboutClass.js:24 Parent Component Mounted (Loaded)
+
+
 
  Mounting -> Parent -> Child Relationship -> When parent gets loaded (Mounted) Constructor of parent wuold be called then parent rendered would be called then in render it would go to child(class based component), so it has not has finished mounting, then it would trigger child based life cycle would be called -> Childeren constrcutor, children render and children componentDidMount method. Then the parent component Did mount method is class
+
+
+ componentDidMount method is used to make API calls. Why? ->  So to quickly render the compoent and then make API call so that component does not have to wait to rendering
+
+ In Functional Component we make API call using useEffect Hook, which has an dependency array which has call back function. So that react does not wait for API call to render the compoent.
+
+
+Imporant React life cycle diagram:-  https://www.google.com/url?sa=i&url=https%3A%2F%2Fprojects.wojtekmaj.pl%2Freact-lifecycle-methods-diagram%2F&psig=AOvVaw0mWdV_pdHHhHX2wAPsceYC&ust=1709509980342000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJDgyYrj1oQDFQAAAAAdAAAAABAE
+
+
+Mounting of a component in react has two phases 1st is render phase and 2nd is the commit phase. In the render phase the react calls constructor and render method of all the child classes it updates the DOM,and then in commit phase React updates the DOM with schedule calls in componentDidMount method.
+
+React batches render phases for all the children and then it renders it comit.
+Then commit would be in Batch as well.
+
 
